@@ -1,4 +1,4 @@
-# Graphql API
+# Own API
 
 Simple API template implemented without frameworks
 
