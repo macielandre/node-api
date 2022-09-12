@@ -1,12 +1,13 @@
 {
   "name": "own-api",
   "version": "1.0.0",
-  "description": "API implemented with js decorators",
-  "main": "index.js",
+  "description": "Api template",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon --exec npm start",
-    "start": "npx babel-node server.js"
+    "test": "node --test tests/",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,5 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/node": "^7.18.10",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-class-static-block": "^7.18.6",
-    "@babel/plugin-proposal-decorators": "^7.18.10"
   }
 }

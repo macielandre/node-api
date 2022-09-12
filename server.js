@@ -1,18 +1,14 @@
-require('dotenv').config({ path: 'env/.env' })
+import * as dotenv from 'dotenv'
+dotenv.config({ path: 'env/.env' })
 
-const port = process.env.PORT
-const { handler } = require('./decorator')
-const { createServer } = require('http')
+const port = process.env.PORT || 80
+import { createServer } from 'http'
+import handler from './handler.js'
 
-class Server {
-    @handler
-    static async get() {
-        return { statusCode: 200, message: 'Everything working' }
-    }
-}
-
-const server = new Server()
-
-createServer(Server.get).listen(port || 80, () => {
+const server = createServer(handler).listen(port, () => {
     console.log(`> server running on port ${port}`)
 })
+
+export {
+    server
+}
