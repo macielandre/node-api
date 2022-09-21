@@ -1,4 +1,4 @@
-# Own API
+# Node API
 
 Simple API template implemented without frameworks
 
